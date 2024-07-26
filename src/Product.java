@@ -4,9 +4,13 @@ public class Product {
 
     private double price;
 
+    public Product(){
+        this.name ="";
+        this.price = 0.0;
+    }
     public Product(String name, double price) {
         if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Invalid Name");
+            throw new IllegalArgumentException("Name cannot be null or empty");
         }else if (price < 0)
         {
             throw new IllegalArgumentException("Invalid Price");
@@ -22,7 +26,7 @@ public class Product {
 
     public void setName(String name) {
         if (name == null || name.isEmpty()) {
-            throw new IllegalArgumentException("Invalid Name");
+            throw new IllegalArgumentException("Name cannot be Null or Empty");
         }else{
             this.name = name;
         }
@@ -34,7 +38,7 @@ public class Product {
 
     public void setPrice(double price) {
         if (price < 0) {
-            throw new IllegalArgumentException("Invalid Price");
+            throw new IllegalArgumentException("Price Cannot Be Negative");
         }else {
             this.price = price;
         }

@@ -6,7 +6,7 @@ public class VendRunner {
                     System.out.println("---SNACK---");
                     System.out.println(snack1);
 
-                    Snack snack2 = new Snack("Snack 2", -4, true);
+Snack snack2 = new Snack("Snack 2", -4, true);
                     System.out.println("---SNACK---");
                     System.out.println(snack2);
 
@@ -14,9 +14,10 @@ public class VendRunner {
                     Beverage beverage1 = new Beverage("Fanta", 1.09, 16.8);
                     System.out.println("---Beverage---");
                     System.out.println(beverage1);
-                    Beverage beverage2 = new Beverage("Fanta", 1.09, -60);
-                    System.out.println("---Beverage---");
-                    System.out.println(beverage2);
+
+                    //Create the product instance
+                    //Product product = new Product();
+                    //product.setPrice(-3);
 
                     //Slot instance
                     Slot<Snack> slot1 = new Slot<>(snack1, 4);
@@ -27,9 +28,14 @@ public class VendRunner {
                     System.out.println("---Slot2---");
                     System.out.println(slot2);
 
+                    //Create a slot3 instance - invalid input
+                    Slot<Snack> slot3 = null;
+
                     //Vending Machine Instance
                     VendingMachine vendingMachine = new VendingMachine();
 
+                    //Invalid Input - slot3
+                    //vendingMachine.addProduct("ERD",slot3);
                     //Add Products to Vending Machine
                     vendingMachine.addProduct("PopCorn", slot1);
                     vendingMachine.addProduct("Fanta", slot2);
@@ -39,6 +45,8 @@ public class VendRunner {
                     vendingMachine.displayProducts();
 
                     //Dispense products
+                    //Invalid input
+                    //Product dispensedProduct = vendingMachine.dispenseProduct("");
                     Product dispensedProduct1 = vendingMachine.dispenseProduct("Fanta");
                     Product dispensedProduct2 = vendingMachine.dispenseProduct("PopCorn");
                     Product dispensedProduct3 = vendingMachine.dispenseProduct("Fanta");
